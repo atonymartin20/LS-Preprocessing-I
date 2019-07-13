@@ -53,21 +53,25 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-}
+// html, body {
+//     height: 100%;
+// }
+
+// CSS RESET COMPLETED
+
+// VARIABLES:
+@max-width: 100%;
+
+// MIXINS
+
 
 html {
 	font-size: 62.5%;
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
 	max-width: 1200px;
-	width: 100%;
-	border: 2px solid blue;
+	width: @max-width;
 	margin: 0 auto;
 	padding: 20px 5%;
 }
@@ -85,8 +89,14 @@ nav a {
 	margin: 0px 10px;
 }
 
+main {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+}
 .top-section {
-	width: 100%;
+	width: @max-width;
 	background-color: lightgrey;
 	padding: 25px 5%;
 }
@@ -130,6 +140,7 @@ h3 {
 }
 .mid-section {
 	display: flex;
+	width: @max-width;
 }
 
 .about {
@@ -153,7 +164,8 @@ li {
 
 }
 .bottom-section {
-
+	width: @max-width;
+	padding: 0px 5%;
 }
 
 footer {
@@ -163,4 +175,5 @@ footer {
 	text-align: center;
 	padding: 20px 5%;
 	margin-top: 20px;
+	width: @max-width;
 }
