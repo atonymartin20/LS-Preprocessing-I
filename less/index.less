@@ -53,18 +53,32 @@ table {
     box-sizing: border-box;
 }
 
-// html, body {
-//     height: 100%;
-// }
-
 // CSS RESET COMPLETED
 
 // VARIABLES:
 @max-width: 100%;
 
 // MIXINS
+.footer-styling() {
+	font-size: 1.6rem;
+	color: white;
+	background-color: grey;
+	text-align: center;
+	padding: 20px 5%;
+	margin-top: 20px;
+	width: @max-width;
+}
 
+.flex-jc-flex-end() {
+	display: flex;
+	justify-content: flex-end;
+}
 
+.flex-column-wrap() {
+	display: felx;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
 html {
 	font-size: 62.5%;
 }
@@ -77,8 +91,7 @@ body {
 }
 
 nav {
-	display: flex;
-	justify-content: flex-end;
+	.flex-jc-flex-end;
 }
 
 nav a {
@@ -90,10 +103,7 @@ nav a {
 }
 
 main {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-
+	.flex-column-wrap;
 }
 .top-section {
 	width: @max-width;
@@ -104,6 +114,9 @@ main {
 .top-section img {
 	width: 40%;
 	margin-bottom: 20px;
+	@media (max-width: 500px) {
+		display: none;
+	}
 }
 
 h1 {
@@ -132,6 +145,12 @@ button {
 	margin-top: 20px;
 	padding: 10px;
 	text-decoration: none;
+
+	@media (max-width: 500px) {
+		display: flex;
+		justify-content: center;
+		margin: 20px auto 0px auto;
+	}
 }
 
 h3 {
@@ -141,16 +160,25 @@ h3 {
 .mid-section {
 	display: flex;
 	width: @max-width;
+	flex-wrap: wrap;
 }
 
 .about {
 	width: 50%;
 	padding: 0px 5%;
+	@media (max-width: 500px) {
+		width: 95%;
+		margin-bottom: 15px;
+	}	
 }
 
 .skills {
 	padding-left: 5%;
 	width: 50%;
+	@media (max-width: 500px) {
+		width: 95%;
+		margin-bottom: 15px;
+	}	
 }
 
 ul {
@@ -166,14 +194,12 @@ li {
 .bottom-section {
 	width: @max-width;
 	padding: 0px 5%;
+	@media (max-width: 500px) {
+		width: 95%;
+		margin-bottom: 15px;
+	}	
 }
 
 footer {
-	font-size: 1.6rem;
-	color: white;
-	background-color: grey;
-	text-align: center;
-	padding: 20px 5%;
-	margin-top: 20px;
-	width: @max-width;
+	.footer-styling;
 }

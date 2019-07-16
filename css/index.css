@@ -151,7 +151,7 @@ nav a {
   margin: 0px 10px;
 }
 main {
-  display: flex;
+  display: felx;
   flex-direction: column;
   flex-wrap: wrap;
 }
@@ -163,6 +163,11 @@ main {
 .top-section img {
   width: 40%;
   margin-bottom: 20px;
+}
+@media (max-width: 500px) {
+  .top-section img {
+    display: none;
+  }
 }
 h1 {
   font-size: 6.2rem;
@@ -188,6 +193,13 @@ button {
   padding: 10px;
   text-decoration: none;
 }
+@media (max-width: 500px) {
+  button {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto 0px auto;
+  }
+}
 h3 {
   font-size: 3rem;
   margin: 10px 0;
@@ -195,14 +207,27 @@ h3 {
 .mid-section {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
 }
 .about {
   width: 50%;
   padding: 0px 5%;
 }
+@media (max-width: 500px) {
+  .about {
+    width: 95%;
+    margin-bottom: 15px;
+  }
+}
 .skills {
   padding-left: 5%;
   width: 50%;
+}
+@media (max-width: 500px) {
+  .skills {
+    width: 95%;
+    margin-bottom: 15px;
+  }
 }
 ul {
   list-style-type: disc;
@@ -215,6 +240,12 @@ li {
 .bottom-section {
   width: 100%;
   padding: 0px 5%;
+}
+@media (max-width: 500px) {
+  .bottom-section {
+    width: 95%;
+    margin-bottom: 15px;
+  }
 }
 footer {
   font-size: 1.6rem;
